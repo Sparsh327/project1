@@ -1,7 +1,7 @@
 import { Container } from "~/components/container";
 import { Navbar } from "~/components/navbar";
-import logoDark from "./logo-dark.svg";
-import logoLight from "./logo-light.svg";
+import image from "./hero-ui-v5.webp";
+
 import { Hero } from "~/components/hero";
 
 export function Welcome() {
@@ -11,15 +11,21 @@ import { useEffect, useState } from "react";
 
 export default function LandingPage() {
   return (
-    <div className="flex flex-col items-center h-screen bg-blue-50">
+    <div className="flex flex-col items-center h-screen bg-blue-50 relative">
+      <div className="mx-auto absolute h-full max-w-5xl w-full inset-0">
+        <div className="absolute inset-y-0 left-0 h-full w-px bg-gradient-to-b from-neutral-300/50 via-neutral-200 to-transparent pointer-events-none z-0" />
+        <div className="absolute inset-y-0 right-0 h-full w-px bg-gradient-to-b from-neutral-300/50 via-neutral-200 to-transparent pointer-events-none z-0" />
+      </div>
       <Container>
-        <div className="mx-auto absolute h-full w-265 inset-0">
-          <div className="absolute inset-y-0 left-0 h-full w-px bg-gradient-to-b from-neutral-300/50 via-neutral-200 to-transparent pointer-events-none z-0" />
-          <div className="absolute inset-y-0 right-0 h-full w-px bg-gradient-to-b from-neutral-300/50 via-neutral-200 to-transparent pointer-events-none z-0" />
-        </div>
         <Navbar />
         <Hero></Hero>
       </Container>
+      <div className="relative w-full">
+        <div className="h-px w-full bg-gradient-to-r from-transparent via-neutral-300/50 to-transparent"></div>
+      </div>
+      <div className="mx-auto max-w-5xl p-4">
+        <img src={image} alt="" />
+      </div>
     </div>
   );
 }
