@@ -16,8 +16,8 @@ export default function LandingPage() {
         <div className="absolute inset-y-0 left-0 h-full w-px bg-gradient-to-b from-neutral-300/50 via-neutral-200 to-transparent pointer-events-none z-0" />
         <div className="absolute inset-y-0 right-0 h-full w-px bg-gradient-to-b from-neutral-300/50 via-neutral-200 to-transparent pointer-events-none z-0" />
       </div>
+      <Navbar />
       <Container>
-        <Navbar />
         <Hero></Hero>
       </Container>
       <div className="relative w-full">
